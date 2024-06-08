@@ -1,0 +1,194 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GPD - Gestão de Processo de Dados</title>
+    <style>
+        /* Estilos gerais */
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        h2 {
+            margin-bottom: 10px;
+        }
+
+        /* Estilos para o formulário de cadastro de chamado */
+        #cadastro-chamado {
+            margin-bottom: 20px;
+            background-color: #f9f9f9;
+            border-radius: 5px;
+            padding: 20px;
+        }
+
+        #formulario-chamado input[type="text"],
+        #formulario-chamado select,
+        #formulario-chamado textarea {
+            width: calc(100% - 16px);
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        #formulario-chamado textarea {
+            height: 100px;
+        }
+
+        #salvar-chamado,
+        #cancelar-chamado {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        #salvar-chamado:hover,
+        #cancelar-chamado:hover {
+            background-color: #0056b3;
+        }
+
+        /* Estilos para a visualização de chamados */
+        #lista-chamados {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        #lista-chamados li {
+            border: 1px solid #ccc;
+            margin-bottom: 10px;
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        /* Estilos para a consulta de solicitações */
+        #lista-solicitacoes {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        #lista-solicitacoes li {
+            border: 1px solid #ccc;
+            margin-bottom: 10px;
+            padding: 10px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Tela de Cadastro de Chamado (Usuário) -->
+        <div id="cadastro-chamado">
+            <h2>Cadastro de Chamado</h2>
+            <!-- Formulário para cadastro de chamado -->
+            <form id="formulario-chamado">
+                <!-- Campos do formulário -->
+                <input type="text" placeholder="ID">
+                <input type="text" placeholder="Data de Criação">
+                <input type="text" placeholder="Solicitante">
+                <select>
+                    <option value="FEL">FEL</option>
+                    <option value="FIA">FIA</option>
+                    <option value="FIC">FIC</option>
+                    <option value="FIO">FIO</option>
+                    <option value="FCA">FCA</option>
+                    <option value="FECSA">FECSA</option>
+                    <option value="FEIM">FEIM</option>
+                    <option value="FEMX">FEMX</option>
+                </select>
+                <input type="text" value="GPD" readonly>
+                <select>
+                    <option value="Cadastro de cliente">Cadastro de cliente</option>
+                    <option value="Alteração de Cliente">Alteração de Cliente</option>
+                    <option value="Cadastro de Item">Cadastro de Item</option>
+                    <option value="Alteração de Item">Alteração de Item</option>
+                    <option value="Solicitação de Documentos">Solicitação de Documentos</option>
+                    <option value="LGPD">LGPD</option>
+                    <option value="LIBERAÇÃO ROBO">LIBERAÇÃO ROBO</option>
+                    <option value="QUESTIONARIOS">QUESTIONARIOS</option>
+                    <option value="PORTAIS DE CADASTRO">PORTAIS DE CADASTRO</option>
+                </select>
+                <select>
+                    <option value="Alto">Alto</option>
+                    <option value="Médio">Médio</option>
+                    <option value="Baixo">Baixo</option>
+                </select>
+                <textarea placeholder="Descrição"></textarea>
+                <input type="file">
+            </form>
+            <!-- Botões -->
+            <button id="salvar-chamado">Salvar</button>
+            <button id="cancelar-chamado">Cancelar</button>
+        </div>
+
+        <!-- Tela de Visualização de Chamados (Operadores) -->
+        <div id="visualizacao-chamados">
+            <h2>Visualização de Chamados</h2>
+            <!-- Filtros -->
+            <!-- Lista de Chamados -->
+            <ul id="lista-chamados">
+                <!-- Itens da lista de chamados -->
+            </ul>
+        </div>
+
+        <!-- Tela de Consulta de Solicitações -->
+        <div id="consulta-solicitacoes">
+            <h2>Consulta de Solicitações</h2>
+            <!-- Filtros -->
+            <!-- Lista de Solicitações -->
+            <ul id="lista-solicitacoes">
+                <!-- Itens da lista de solicitações -->
+            </ul>
+        </div>
+    </div>
+
+    <!-- Scripts JavaScript -->
+    <script>
+        // JavaScript para interatividade
+        // Variáveis para armazenar dados
+        let chamados = [];
+        let usuarios = []; // Você precisa preencher isso com os dados do Excel
+
+        // Funções para manipulação de dados e interface
+        function salvarChamado(event) {
+            event.preventDefault();
+            // Lógica para salvar o chamado
+        }
+
+        function cancelarChamado(event) {
+            event.preventDefault();
+            // Lógica para cancelar o cadastro do chamado
+        }
+
+        function visualizarChamados() {
+            // Lógica para mostrar os chamados na tela de operadores
+        }
+
+        function filtrarChamados() {
+            // Lógica para filtrar os chamados
+        }
+
+        function consultarSolicitacoes() {
+            // Lógica para consultar as solicitações
+        }
+
+        // Event listeners para botões
+        document.getElementById("salvar-chamado").addEventListener("click", salvarChamado);
+        document.getElementById("cancelar-chamado").addEventListener("click", cancelarChamado);
+
+        // Inicialização da aplicação
+        visualizarChamados();
+        consultarSolicitacoes();
+    </script>
+</body>
+</html>
